@@ -1,0 +1,4 @@
+theme = "mellow"
+
+[editor]
+true-color = true
