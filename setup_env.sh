@@ -2,6 +2,7 @@
 dir=$PWD
 
 # install oh my zsh and activate it
+sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 source ~/.zshrc
 
