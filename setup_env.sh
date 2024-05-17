@@ -58,3 +58,8 @@ cargo install --locked bat
 
 # install fdfind
 cargo install fd-find
+
+wget https://sqlite.org/2024/sqlite-autoconf-3450300.tar.gz
+cd sqlite-autoconf-3450300/
+./configure --prefix=/usr/local
+sudo make && sudo make install

@@ -100,15 +100,24 @@ export EDITOR='hx'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-export ARCH_NAME=wormhole_b0
+export ARCH_NAME="wormhole_b0"
 export TT_METAL_HOME="/home/tt-saad/workspace/tt-metal"
 export PYTHONPATH="/home/tt-saad/workspace/tt-metal"
 export TT_METAL_ENV=dev
 export HELIX_RUNTIME="/home/tt-saad/.config/helix/runtime"
-export TT_METAL_LOGGER_LEVEL="Debug ./build/test/tt_metal/test_add_two_ints"
+export TT_METAL_LOGGER_LEVEL="Debug"
+export TT_METAL_DPRINT_CORES="0,0"
+export TT_METAL_WATCHER="20"
+export TT_METAL_WATCHER_APPEND="1"
+export TT_METAL_WATCHER_DUMP_ALL="1"
+export TT_METAL_LOGGER_TYPES="Op"
+export CONFIG="Debug"
 
 alias bat="batcat"
 alias fd="fdfind"
+alias make_proj="./build_metal.sh && source python_env/bin/activate"
+alias run_post="./tests/scripts/run_tests.sh --tt-arch $ARCH_NAME --pipeline-type post_commit"
+alias gsubmod="git submodule foreach 'git lfs fetch --all && git lfs pull'"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -118,3 +127,6 @@ alias fd="fdfind"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
